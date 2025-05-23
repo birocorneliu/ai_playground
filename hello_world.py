@@ -103,6 +103,7 @@ if __name__ == "__main__":
     print("\nArticle created successfully!")
     article_id = creation_response["location"].split("/")[-1]
     print(f"\nhttps://figsh.com/account/articles/{article_id}")
+    print(f"\nhttps://api.figsh.com/v2/account/articles/{article_id}?access_token={TOKEN}")
 
     uploader = FigshareUploader(TOKEN)
     uploader.upload_file(article_id, pdf_path)
